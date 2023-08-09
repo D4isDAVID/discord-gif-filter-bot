@@ -1,0 +1,29 @@
+{
+  "name": "discord.js-components-bot",
+  "description": "Discord.js bot template with components system",
+  "license": "MIT",
+  "private": true,
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "lint": "prettier --ignore-path .gitignore -c .",
+    "format": "prettier --ignore-path .gitignore -w .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "deploy": "node --require dotenv/config dist/deploy.js",
+    "start": "node --require dotenv/config ."
+  },
+  "dependencies": {
+    "@discordjs/collection": "^1.5.2",
+    "@discordjs/core": "^1.0.0",
+    "@discordjs/formatters": "^0.3.1",
+    "@discordjs/rest": "^2.0.0",
+    "@discordjs/ws": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.7",
+    "dotenv": "^16.3.1",
+    "prettier": "^3.0.1",
+    "typescript": "^5.1.6"
+  }
+}
