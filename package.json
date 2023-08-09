@@ -1,6 +1,6 @@
 {
-  "name": "discord.js-components-bot",
-  "description": "Discord.js bot template with components system",
+  "name": "discord-gif-filter-bot",
+  "description": "A Discord bot that filters gifs based on size and keywords",
   "license": "MIT",
   "private": true,
   "main": "dist/index.js",
