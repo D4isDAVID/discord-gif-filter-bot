@@ -1,7 +1,10 @@
 # discord-gif-filter-bot
 
-A Discord bot that filters gifs based on size and keywords.
+A Discord bot that filters gifs based on pixel size and keywords.
 Created using the [D4isDAVID/discord.js-components-bot] template.
+
+This bot is supposed to be just for fun so I used JSON for saving things
+(sorry I can't be bothered).
 
 - [Configuration](#configuration)
 - [Scripts](#scripts)

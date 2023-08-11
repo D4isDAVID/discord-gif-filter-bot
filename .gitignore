@@ -8,6 +8,9 @@ dist/
 .env*
 !.env.example
 
+# JSON Data
+data/
+
 # IDE-related
 .idea/
 .vscode/*

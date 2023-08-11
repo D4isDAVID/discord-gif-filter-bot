@@ -18,6 +18,7 @@
     "@discordjs/core": "^1.0.0",
     "@discordjs/formatters": "^0.3.1",
     "@discordjs/rest": "^2.0.0",
+    "@discordjs/util": "^1.0.0",
     "@discordjs/ws": "^1.0.0"
   },
   "devDependencies": {
