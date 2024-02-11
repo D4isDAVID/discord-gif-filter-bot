@@ -35,10 +35,10 @@ type EventName =
 type EventExecuteArgs<T extends EventName> = T extends keyof RestEvents
     ? RestEvents[T]
     : T extends keyof ManagerShardEventsMap
-    ? ManagerShardEventsMap[T]
-    : T extends keyof MappedEvents
-    ? MappedEvents[T]
-    : never;
+      ? ManagerShardEventsMap[T]
+      : T extends keyof MappedEvents
+        ? MappedEvents[T]
+        : never;
 
 interface IEvent<T extends EventName> {
     readonly type: 'on' | 'once';
@@ -50,8 +50,8 @@ type ContextMenuInteractionType<T extends APIContextMenuInteraction> =
     T extends APIUserApplicationCommandInteraction
         ? ApplicationCommandType.User
         : T extends APIMessageApplicationCommandInteraction
-        ? ApplicationCommandType.Message
-        : never;
+          ? ApplicationCommandType.Message
+          : never;
 
 interface MessageComponentDataMap {
     [ComponentType.ActionRow]: never;
@@ -69,15 +69,15 @@ type InteractionData<T extends APIInteraction> =
         ? T extends APIChatInputApplicationCommandInteraction
             ? RESTPostAPIChatInputApplicationCommandsJSONBody
             : T extends APIContextMenuInteraction
-            ? RESTPostAPIContextMenuApplicationCommandsJSONBody & {
-                  type: ContextMenuInteractionType<T>;
-              }
-            : never
+              ? RESTPostAPIContextMenuApplicationCommandsJSONBody & {
+                    type: ContextMenuInteractionType<T>;
+                }
+              : never
         : T extends APIMessageComponentInteraction
-        ? MessageComponentDataMap[T['data']['component_type']]
-        : T extends APIModalSubmitInteraction
-        ? APIModalInteractionResponseCallbackData
-        : never;
+          ? MessageComponentDataMap[T['data']['component_type']]
+          : T extends APIModalSubmitInteraction
+            ? APIModalInteractionResponseCallbackData
+            : never;
 
 type InteractionExecuteArgs<T extends APIInteraction> = WithIntrinsicProps<T>;
 
